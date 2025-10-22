@@ -3,7 +3,16 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
 
 // Smooth Scrolling
@@ -12,14 +21,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
             });
-            // Close mobile menu if open
-            navMenu.classList.remove('active');
         }
     });
+});
+
+// Navbar Background on Scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = 'none';
+    }
 });
 
 // Animate Skill Bars on Scroll
@@ -31,8 +51,8 @@ const observerOptions = {
 const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const skillBars = entry.target.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
+            const progressBars = entry.target.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
                 const width = bar.style.width;
                 bar.style.width = '0';
                 setTimeout(() => {
@@ -48,88 +68,7 @@ if (skillsSection) {
     skillObserver.observe(skillsSection);
 }
 
-// Add active class to navigation based on scroll position
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Typing Effect for Hero Title (Optional Enhancement)
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle) {
-    const text = heroTitle.innerHTML;
-    heroTitle.innerHTML = '';
-    let i = 0;
-    
-    function typeWriter() {
-        if (i < text.length) {
-            heroTitle.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-    
-    // Start typing effect when page loads
-    setTimeout(typeWriter, 500);
-}
-
-// Form Validation (if you add a contact form later)
-function validateForm(form) {
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-    let isValid = true;
-    
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            input.classList.add('error');
-            isValid = false;
-        } else {
-            input.classList.remove('error');
-        }
-    });
-    
-    return isValid;
-}
-
-// Add loading animation to buttons
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        if (this.classList.contains('btn-primary') && this.href.includes('mailto:')) {
-            // Email button clicked
-            this.innerHTML = '<i class="fas fa-paper-plane"></i> Opening Email...';
-            setTimeout(() => {
-                this.innerHTML = 'Get In Touch';
-            }, 2000);
-        }
-    });
-});
-
-// Project Card Hover Effects
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
-
-// Add fade-in animation on scroll
+// Fade in Animation
 const fadeInObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -141,10 +80,71 @@ const fadeInObserver = new IntersectionObserver((entries) => {
     threshold: 0.1
 });
 
-// Observe all cards and sections
-document.querySelectorAll('.skill-card, .project-card, .education-item').forEach(el => {
+// Add fade-in animation to elements
+document.querySelectorAll('.skill-card, .project-card, .contact-item').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
     fadeInObserver.observe(el);
+});
+
+// Form Handling
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate sending (FormSubmit will handle the actual sending)
+        setTimeout(() => {
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitBtn.style.background = '#10b981';
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+                this.reset();
+            }, 3000);
+        }, 2000);
+    });
+}
+
+// Add hover effect to project cards
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Dynamic Year in Footer
+const currentYear = new Date().getFullYear();
+const footerText = document.querySelector('.footer p');
+if (footerText) {
+    footerText.innerHTML = `&copy; ${currentYear} Wai Shan Kyaw. All rights reserved.`;
+}
+
+// Add loading animation to hero image
+window.addEventListener('load', () => {
+    const heroImage = document.querySelector('.hero-image');
+    if (heroImage) {
+        heroImage.style.opacity = '0';
+        heroImage.style.transform = 'translateX(50px)';
+        
+        setTimeout(() => {
+            heroImage.style.transition = 'all 1s ease';
+            heroImage.style.opacity = '1';
+            heroImage.style.transform = 'translateX(0)';
+        }, 300);
+    }
 });
