@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wai Shan Kyaw - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Wai Shan Kyaw</div>
+            <div class="nav-logo">
+                <span class="logo-text">WSK</span>
+                <span class="logo-dot"></span>
+            </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -30,18 +36,54 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm <span class="highlight">Wai Shan Kyaw</span></h1>
-            <p class="hero-subtitle">ICT Student at Rangsit University</p>
-            <p class="hero-description">Aspiring developer learning Python, Java, HTML, and Unity. Passionate about technology and always eager to learn more.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">Hello, I'm</div>
+                    <h1 class="hero-title">
+                        Wai Shan
+                        <span class="title-highlight">Kyaw</span>
+                    </h1>
+                    <p class="hero-description">
+                        Third-year ICT student at Rangsit University, exploring the world of 
+                        <span class="typing-text"></span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <i class="fas fa-university"></i>
+                                <span>Rangsit University</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-code"></i>
+                                <span>ICT Student</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Thailand</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="profile-placeholder">
-                <i class="fas fa-user"></i>
+            <div class="scroll-indicator">
+                <div class="scroll-text">Scroll to explore</div>
+                <div class="scroll-line"></div>
             </div>
         </div>
     </section>
@@ -49,22 +91,55 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Learning & Growing</h2>
+                <p class="section-description">A journey through technology with curiosity and dedication</p>
+            </div>
+            
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a third-year Information and Communication Technology student at Rangsit University, currently seeking internship opportunities to gain real-world experience.</p>
+                    <p class="about-intro">
+                        I'm Wai Shan Kyaw, a third-year Information and Communication Technology student 
+                        at Rangsit University, currently seeking internship opportunities to gain real-world experience.
+                    </p>
                     
-                    <p>While I'm still developing my skills in programming, I have foundational knowledge in Python, Java, HTML, and Unity. I'm honest about my current skill level - I'm not an expert yet, but I'm committed to continuous learning and improvement.</p>
-                    
-                    <p>What I lack in experience, I make up for with enthusiasm, dedication, and a strong willingness to learn from experienced professionals.</p>
-                    
-                    <div class="education">
-                        <h3>Education</h3>
-                        <div class="education-item">
-                            <h4>Rangsit University</h4>
-                            <p>Bachelor of Science in Information and Communication Technology</p>
-                            <span>2022 - Present (3rd Year)</span>
+                    <div class="about-details">
+                        <p>
+                            My journey in tech is just beginning. While I'm still developing my skills in programming, 
+                            I have foundational knowledge in Python, Java, HTML, and Unity. I'm honest about my current 
+                            skill level – I'm not an expert yet, but I'm committed to continuous learning and improvement.
+                        </p>
+                        <p>
+                            What I lack in experience, I make up for with enthusiasm, dedication, and a strong 
+                            willingness to learn from experienced professionals.
+                        </p>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
+                        <div class="education-content">
+                            <h3>Rangsit University</h3>
+                            <p>Bachelor of Science in Information and Communication Technology</p>
+                            <span>2022 - Present | 3rd Year Student</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Years of Study</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Programming Languages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Learning Mindset</div>
                     </div>
                 </div>
             </div>
@@ -74,85 +149,109 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Learning Journey</h2>
-            <p class="section-subtitle">Technologies I'm learning and improving every day</p>
-            
+            <div class="section-header">
+                <span class="section-label">Skills</span>
+                <h2 class="section-title">My Learning Journey</h2>
+                <p class="section-description">Technologies I'm exploring and improving every day</p>
+            </div>
+
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                    <p>Basic programming, data structures, and simple projects</p>
-                    <div class="skill-level">
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 40%"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
                         </div>
-                        <span>Beginner (40%)</span>
+                        <div class="skill-info">
+                            <h3>Python</h3>
+                            <span>Beginner Level</span>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">40% - Basic programming, data structures</span>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <h3>Java</h3>
-                    <p>Object-oriented programming fundamentals</p>
-                    <div class="skill-level">
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 35%"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fab fa-java"></i>
                         </div>
-                        <span>Beginner (35%)</span>
+                        <div class="skill-info">
+                            <h3>Java</h3>
+                            <span>Beginner Level</span>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 35%"></div>
+                        </div>
+                        <span class="progress-text">35% - OOP fundamentals</span>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>HTML/CSS</h3>
-                    <p>Web development basics and responsive design</p>
-                    <div class="skill-level">
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 45%"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
                         </div>
-                        <span>Beginner (45%)</span>
+                        <div class="skill-info">
+                            <h3>HTML/CSS</h3>
+                            <span>Beginner Level</span>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <span class="progress-text">45% - Web basics, responsive design</span>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Unity</h3>
-                    <p>Game development basics and 3D environments</p>
-                    <div class="skill-level">
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 25%"></div>
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-gamepad"></i>
                         </div>
-                        <span>Beginner (25%)</span>
+                        <div class="skill-info">
+                            <h3>Unity</h3>
+                            <span>Beginner Level</span>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                        <span class="progress-text">25% - Game dev basics, 3D environments</span>
                     </div>
                 </div>
             </div>
 
-            <div class="learning-mindset">
-                <h3>My Learning Mindset</h3>
-                <div class="mindset-items">
-                    <div class="mindset-item">
-                        <i class="fas fa-book-open"></i>
-                        <span>Always learning from tutorials and documentation</span>
+            <div class="learning-approach">
+                <h3>My Learning Approach</h3>
+                <div class="approach-grid">
+                    <div class="approach-item">
+                        <div class="approach-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h4>Self-Learning</h4>
+                        <p>Consistent practice with tutorials and documentation</p>
                     </div>
-                    <div class="mindset-item">
-                        <i class="fas fa-users"></i>
-                        <span>Seeking mentorship and guidance</span>
+                    <div class="approach-item">
+                        <div class="approach-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4>Project-Based</h4>
+                        <p>Learning by building real projects, even small ones</p>
                     </div>
-                    <div class="mindset-item">
-                        <i class="fas fa-code"></i>
-                        <span>Practicing with small projects daily</span>
-                    </div>
-                    <div class="mindset-item">
-                        <i class="fas fa-heart"></i>
-                        <span>Passionate about technology and innovation</span>
+                    <div class="approach-item">
+                        <div class="approach-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Seeking Mentorship</h4>
+                        <p>Learning from experienced developers and feedback</p>
                     </div>
                 </div>
             </div>
@@ -162,19 +261,22 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">My learning journey through practical projects</p>
-            
+            <div class="section-header">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">My Learning Projects</h2>
+                <p class="section-description">Real projects that helped me grow my skills</p>
+            </div>
+
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
+                        <div class="project-icon">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>This website! Built with HTML, CSS, and JavaScript. My first major web project showcasing my learning progress.</p>
+                        <h3>Personal Portfolio</h3>
+                        <p>This website! Built to showcase my learning journey and projects. My first major web development project.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -182,10 +284,12 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
                             </a>
                             <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live</span>
                             </a>
                         </div>
                     </div>
@@ -193,19 +297,20 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <div class="project-icon">
                             <i class="fas fa-calculator"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Simple Calculator</h3>
-                        <p>A basic calculator application built with Python to practice functions and user input handling.</p>
+                        <h3>Python Calculator</h3>
+                        <p>A basic calculator application to practice Python functions and user input handling.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
                             </a>
                         </div>
                     </div>
@@ -213,27 +318,29 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
+                        <div class="project-icon">
                             <i class="fas fa-gamepad"></i>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Simple Unity Game</h3>
-                        <p>A basic 2D platformer game in development. Learning Unity interface and C# scripting.</p>
+                        <h3>Simple 2D Game</h3>
+                        <p>A basic 2D platformer game in development. Learning Unity interface and C# scripting basics.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Unity</span>
                             <span class="tech-tag">C#</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="more-projects">
+            <div class="projects-note">
+                <i class="fas fa-lightbulb"></i>
                 <p>I'm always working on new projects to improve my skills. More exciting projects coming soon!</p>
             </div>
         </div>
@@ -242,54 +349,79 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="section-subtitle">I'm looking for internship opportunities to learn and grow</p>
-            
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-description">I'm looking for internship opportunities to learn and grow</p>
+            </div>
+
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
                             <h3>Email</h3>
-                            <p>your.email@student.rangsit.ac.th</p>
+                            <a href="mailto:waishank.65@rsu.ac.th">waishank.65@rsu.ac.th</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
                             <h3>Phone</h3>
-                            <p>+66 (0) XX XXX XXXX</p>
+                            <a href="tel:+66910307191">091-030-7191</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
                             <h3>Location</h3>
-                            <p>Pathum Thani, Thailand</p>
+                            <span>Pathum Thani, Thailand</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="social-links">
-                    <a href="#" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-facebook"></i>
-                        <span>Facebook</span>
-                    </a>
+                <div class="contact-form-section">
+                    <div class="form-header">
+                        <h3>Send me a message</h3>
+                        <p>Looking for internship opportunities or collaboration</p>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
 
-            <div class="call-to-action">
-                <h3>Looking for an Internship Opportunity</h3>
-                <p>I'm eager to learn from experienced professionals and contribute to real-world projects. If you're looking for a motivated intern who's ready to work hard and learn fast, I'd love to hear from you!</p>
-                <a href="mailto:your.email@student.rangsit.ac.th" class="btn btn-primary">Get In Touch</a>
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h3>Looking for an Internship</h3>
+                    <p>
+                        I'm eager to learn from experienced professionals and contribute to real-world projects. 
+                        If you're looking for a motivated intern who's ready to work hard and learn fast, 
+                        I'd love to hear from you!
+                    </p>
+                    <a href="mailto:waishank.65@rsu.ac.th" class="btn btn-secondary">
+                        <span>Email Me Directly</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -297,7 +429,26 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Your Name. Built with ❤️ and lots of learning.</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Wai Shan Kyaw</h4>
+                    <p>ICT Student at Rangsit University</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wai Shan Kyaw. Built with passion and continuous learning.</p>
+            </div>
         </div>
     </footer>
 
