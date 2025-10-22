@@ -3,34 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wai Shan Kyaw | Developer</title>
+    <title>Wai Shan Kyaw | ICT Student</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-    </div>
-
-    <!-- Glitch Overlay -->
-    <div class="glitch-overlay"></div>
-
     <!-- Navigation -->
-    <nav class="nav-cyber">
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="logo-glitch" data-text="WSK_">WSK_</div>
+            <div class="nav-logo">WS<span>K</span></div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">HOME</a></li>
-                <li><a href="#about" class="nav-link">ABOUT</a></li>
-                <li><a href="#skills" class="nav-link">SKILLS</a></li>
-                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
-                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger-cyber">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,63 +29,35 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-cyber">
+    <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="glitch-wrapper">
-                        <h1 class="glitch-text" data-text="WAI SHAN KYAW">WAI SHAN KYAW</h1>
+                    <div class="hero-badge">
+                        <i class="fas fa-circle"></i>
+                        Available for Internship
                     </div>
-                    <div class="hero-subtitle">
-                        <span class="typewriter">ICT STUDENT</span>
-                        <span class="cursor">_</span>
-                    </div>
-                    <div class="hero-description">
-                        <p>// Learning to code</p>
-                        <p>// Python | Java | HTML | Unity</p>
-                        <p>// Available for internships</p>
-                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Wai Shan Kyaw</span>
+                    </h1>
+                    <p class="hero-subtitle">ICT Student at Rangsit University</p>
+                    <p class="hero-description">
+                        Exploring technology through code. Currently learning Python, Java, 
+                        and web development while seeking internship opportunities.
+                    </p>
                     <div class="hero-buttons">
-                        <button class="cyber-btn primary" onclick="scrollToSection('projects')">
-                            <span>VIEW PROJECTS</span>
-                            <i class="fas fa-rocket"></i>
-                        </button>
-                        <button class="cyber-btn secondary" onclick="scrollToSection('contact')">
-                            <span>HIRE ME</span>
-                            <i class="fas fa-bolt"></i>
-                        </button>
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-folder"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <div class="terminal-buttons">
-                                <span class="btn-red"></span>
-                                <span class="btn-yellow"></span>
-                                <span class="btn-green"></span>
-                            </div>
-                            <div class="terminal-title">wsk@portfolio:~</div>
-                        </div>
-                        <div class="terminal-content">
-                            <div class="terminal-line">
-                                <span class="prompt">wsk@portfolio</span>:<span class="path">~/</span>$ <span class="command">whoami</span>
-                            </div>
-                            <div class="terminal-output">Wai Shan Kyaw - ICT Student</div>
-                            <div class="terminal-line">
-                                <span class="prompt">wsk@portfolio</span>:<span class="path">~/</span>$ <span class="command">status --learning</span>
-                            </div>
-                            <div class="terminal-output">Python [45%] ████▌░░░░░</div>
-                            <div class="terminal-output">Java [40%] ████░░░░░░</div>
-                            <div class="terminal-output">HTML [50%] █████░░░░░</div>
-                            <div class="terminal-output">Unity [30%] ███░░░░░░░</div>
-                            <div class="terminal-line">
-                                <span class="prompt">wsk@portfolio</span>:<span class="path">~/</span>$ <span class="command">availability</span>
-                            </div>
-                            <div class="terminal-output">🔍 Seeking internship opportunities</div>
-                            <div class="terminal-line">
-                                <span class="prompt">wsk@portfolio</span>:<span class="path">~/</span>$ <span class="cursor-blink">_</span>
-                            </div>
-                        </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="image0.jpg" alt="Wai Shan Kyaw" class="profile-img">
+                        <div class="image-overlay"></div>
                     </div>
                 </div>
             </div>
@@ -103,49 +65,65 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-cyber">
+    <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title glitch" data-text="ABOUT_ME">ABOUT_ME</h2>
-                <p class="section-subtitle">// System analysis complete</p>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My journey in technology</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <div class="code-block">
-                        <div class="code-line"><span class="comment">// Student Profile</span></div>
-                        <div class="code-line"><span class="keyword">const</span> <span class="variable">student</span> = {</div>
-                        <div class="code-line">  <span class="property">name</span>: <span class="string">"Wai Shan Kyaw"</span>,</div>
-                        <div class="code-line">  <span class="property">university</span>: <span class="string">"Rangsit University"</span>,</div>
-                        <div class="code-line">  <span class="property">major</span>: <span class="string">"Information & Communication Technology"</span>,</div>
-                        <div class="code-line">  <span class="property">year</span>: <span class="number">3</span>,</div>
-                        <div class="code-line">  <span class="property">status</span>: <span class="string">"Seeking Internship"</span>,</div>
-                        <div class="code-line">  <span class="property">skills</span>: [<span class="string">"Python"</span>, <span class="string">"Java"</span>, <span class="string">"HTML"</span>, <span class="string">"Unity"</span>],</div>
-                        <div class="code-line">  <span class="property">learning</span>: <span class="string">"Always"</span></div>
-                        <div class="code-line">};</div>
-                        <div class="code-line"></div>
-                        <div class="code-line"><span class="comment">// About me</span></div>
-                        <div class="code-line"><span class="variable">student</span>.<span class="property">description</span> = <span class="string">"Learning to code in the"</span></div>
-                        <div class="code-line">  + <span class="string">" digital realm. Not an expert yet,"</span></div>
-                        <div class="code-line">  + <span class="string">" but constantly evolving and"</span></div>
-                        <div class="code-line">  + <span class="string">" ready to contribute."</span>;</div>
+                    <p class="lead">
+                        I'm a third-year Information and Communication Technology student 
+                        at Rangsit University, passionate about technology and continuous learning.
+                    </p>
+                    <p>
+                        Currently developing foundational skills in programming with focus 
+                        on Python, Java, and web technologies. I'm honest about my learning 
+                        journey - always improving and eager to take on new challenges.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Years Studying</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2024</span>
+                            <span class="stat-label">Expected Graduate</span>
+                        </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="3">0</div>
-                        <div class="stat-label">YEARS STUDYING</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="4">0</div>
-                        <div class="stat-label">LANGUAGES</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="10">0</div>
-                        <div class="stat-label">PROJECTS</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="1">0</div>
-                        <div class="stat-label">INTERNSHIP NEEDED</div>
+                <div class="about-info">
+                    <h3>Information</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Wai Shan Kyaw</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">waishank.65@rsu.ac.th</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">091-030-7191</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">University</span>
+                            <span class="info-value">Rangsit University</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Major</span>
+                            <span class="info-value">ICT</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status</span>
+                            <span class="info-value">3rd Year</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,134 +131,137 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-cyber">
+    <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title glitch" data-text="SKILLS">SKILLS</h2>
-                <p class="section-subtitle">// Loading skill matrix...</p>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies I'm learning</p>
             </div>
             <div class="skills-grid">
-                <div class="skill-card cyber">
-                    <div class="skill-header">
+                <div class="skill-card">
+                    <div class="skill-icon">
                         <i class="fab fa-python"></i>
-                        <h3>Python</h3>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="45"></div>
+                    <h3>Python</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 45%"></div>
+                        </div>
+                        <span>45%</span>
                     </div>
-                    <div class="skill-level">LEVEL 45/100</div>
+                    <p>Basic programming, data structures</p>
                 </div>
-                <div class="skill-card cyber">
-                    <div class="skill-header">
+
+                <div class="skill-card">
+                    <div class="skill-icon">
                         <i class="fab fa-java"></i>
-                        <h3>Java</h3>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="40"></div>
+                    <h3>Java</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 40%"></div>
+                        </div>
+                        <span>40%</span>
                     </div>
-                    <div class="skill-level">LEVEL 40/100</div>
+                    <p>OOP fundamentals, basic applications</p>
                 </div>
-                <div class="skill-card cyber">
-                    <div class="skill-header">
+
+                <div class="skill-card">
+                    <div class="skill-icon">
                         <i class="fab fa-html5"></i>
-                        <h3>HTML/CSS</h3>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="50"></div>
+                    <h3>HTML/CSS</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 50%"></div>
+                        </div>
+                        <span>50%</span>
                     </div>
-                    <div class="skill-level">LEVEL 50/100</div>
+                    <p>Web development, responsive design</p>
                 </div>
-                <div class="skill-card cyber">
-                    <div class="skill-header">
+
+                <div class="skill-card">
+                    <div class="skill-icon">
                         <i class="fas fa-gamepad"></i>
-                        <h3>Unity</h3>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="30"></div>
+                    <h3>Unity</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 30%"></div>
+                        </div>
+                        <span>30%</span>
                     </div>
-                    <div class="skill-level">LEVEL 30/100</div>
-                </div>
-            </div>
-            <div class="learning-status">
-                <div class="status-indicator">
-                    <span class="pulse-dot"></span>
-                    <span>LEARNING IN PROGRESS</span>
-                </div>
-                <div class="status-text">
-                    <p>// Status: Constantly upgrading skills</p>
-                    <p>// Next: Advanced Python, React, Node.js</p>
+                    <p>Game development basics</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-cyber">
+    <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title glitch" data-text="PROJECTS">PROJECTS</h2>
-                <p class="section-subtitle">// Executing project scan...</p>
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">What I've been working on</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card cyber">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-terminal"></i>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio built with HTML, CSS, and JavaScript. Showcases my learning journey and technical skills.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
                         </div>
-                        <div class="project-status">ACTIVE</div>
-                    </div>
-                    <h3>Portfolio Terminal</h3>
-                    <p>Cyberpunk-themed portfolio website built with modern web technologies and hacker aesthetics.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="cyber-btn small">
-                            <i class="fab fa-github"></i> CODE
-                        </button>
-                        <button class="cyber-btn small">
-                            <i class="fas fa-external-link-alt"></i> LIVE
-                        </button>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card cyber">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-calculator"></i>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Calculator App</h3>
+                        <p>Simple calculator application built with Python to practice functions and user input handling.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
                         </div>
-                        <div class="project-status">COMPLETED</div>
-                    </div>
-                    <h3>Python Calculator</h3>
-                    <p>Command-line calculator application with advanced functions and error handling.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Math</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="cyber-btn small">
-                            <i class="fab fa-github"></i> CODE
-                        </button>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card cyber">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-gamepad"></i>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Unity Game</h3>
+                        <p>Basic 2D platformer game in development. Learning Unity interface and C# scripting fundamentals.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
                         </div>
-                        <div class="project-status">IN DEVELOPMENT</div>
-                    </div>
-                    <h3>Unity Game</h3>
-                    <p>2D platformer game with custom physics and level design, currently in development.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="cyber-btn small">
-                            <i class="fab fa-github"></i> CODE
-                        </button>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,106 +269,81 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-cyber">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title glitch" data-text="CONTACT">CONTACT</h2>
-                <p class="section-subtitle">// Establishing connection...</p>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready for internship opportunities</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <i class="fas fa-envelope"></i>
                         <div class="contact-details">
-                            <h4>EMAIL</h4>
-                            <p class="glitch-text-small" data-text="waishank.65@rsu.ac.th">waishank.65@rsu.ac.th</p>
+                            <h4>Email</h4>
+                            <a href="mailto:waishank.65@rsu.ac.th" class="contact-link">
+                                waishank.65@rsu.ac.th
+                            </a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                        <i class="fas fa-phone"></i>
                         <div class="contact-details">
-                            <h4>PHONE</h4>
-                            <p class="glitch-text-small" data-text="091-030-7191">091-030-7191</p>
+                            <h4>Phone</h4>
+                            <a href="tel:+66910307191" class="contact-link">
+                                091-030-7191
+                            </a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <i class="fas fa-map-marker-alt"></i>
                         <div class="contact-details">
-                            <h4>LOCATION</h4>
-                            <p>PATHUM THANI, TH</p>
+                            <h4>Location</h4>
+                            <p>Pathum Thani, Thailand</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
+                        <i class="fas fa-university"></i>
                         <div class="contact-details">
-                            <h4>UNIVERSITY</h4>
-                            <p>RANGSIT UNIVERSITY</p>
+                            <h4>University</h4>
+                            <p>Rangsit University</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form-container">
-                    <h3>// SEND TRANSMISSION</h3>
-                    <form action="https://formsubmit.co/waishank.65@rsu.ac.th" method="POST" class="cyber-form">
-                        <input type="hidden" name="_subject" value="TRANSMISSION FROM PORTFOLIO">
+                    <h3>Send me a message</h3>
+                    <form action="https://formsubmit.co/waishank.65@rsu.ac.th" method="POST" class="contact-form">
+                        <input type="hidden" name="_subject" value="New message from portfolio">
                         <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_autoresponse" value="TRANSMISSION RECEIVED. RESPONSE PENDING.">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your message! I'll get back to you soon.">
                         
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="CALLSIGN" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="FREQUENCY" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="TRANSMISSION DATA" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="cyber-btn primary">
-                            <span>SEND TRANSMISSION</span>
-                            <i class="fas fa-broadcast-tower"></i>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-cyber">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 WSK_ // SYSTEM ONLINE</p>
-                    <p>// BUILT IN THE DIGITAL WASTELAND</p>
-                </div>
-                <div class="footer-glitch">
-                    <span class="glitch-text" data-text="01001000 01101001">01001000 01101001</span>
-                </div>
-            </div>
+            <p>&copy; 2024 Wai Shan Kyaw. Built with passion and continuous learning.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
